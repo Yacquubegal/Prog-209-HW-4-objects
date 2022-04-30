@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Food Form</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h2>Track Calories</h2>
+
+<!-- return set to false to prevent default form submission to a URL -->
+<form name = "mainFrom" onsubmit="return false">
+
+<!--       The <fieldset> tag is used to group related elements in a form. -->
+	<fieldset id="foodInfo">
+    <!--       The <legend> tag is puts a title on this subset of the form -->
+    
+    <!--       for= some id connects the lable to to the input box -->
+   <label for="foodname"> Food Name:</label> 
+    <input name="foodname" id="foodname" />  <br>
+    
+     <label for="Calories">Number of Calories:</label>
+    <input name="Calories" id="Calories" /> <br>
+    
+      <!-- here we submit to a local js file -->
+    <input type="submit" value="Submit" onclick="formSubmitEvent()">
+    
+    </fieldset>
+</form>
+
+<br><br>
+<label for="whichPerson">Total Calories:</label>
+<input name="whichPerson" id="whichPerson" /><br>
+
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
+
