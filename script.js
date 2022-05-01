@@ -8,7 +8,7 @@ var Fooditem = function(pfoodname, pCalories) {
 };
 
 CustomerArray = []; // define an array to hold Customer objects
-value = [];
+
  
 
 // pr-load array with 2 objects
@@ -43,18 +43,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
 // define what should happen when the form is submitted
 function formSubmitEvent() {
     console.log(CustomerArray);
-    let message = "foodname  Calories\n"; 
-    for (i = 0; i < CustomerArray.length; i++) {
-        if( document.getElementById("whichPerson").value == CustomerArray[i].foodname){
-        message = message + CustomerArray[i].foodname + "  " + CustomerArray[i].Calories;
-        }
-    }
     let tfoodname = document.getElementById("foodname").value;
     let tCalories = document.getElementById("Calories").value;
     CustomerArray.push( new Fooditem(tfoodname, tCalories))
     // clear text boxes
     document.getElementById("foodname").value = "";
     document.getElementById("Calories").value = "";
-    }
-
-
+    // at this point you have just added another item to the array
+    // loop thru the array and add up the calorie count for each object in the array
+    // and then write that out to the (very badly named)
+    // <input name="whichPerson" id="whichPerson" /><br>
+        }
+  
